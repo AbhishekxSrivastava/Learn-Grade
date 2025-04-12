@@ -4,7 +4,7 @@ import { Header } from './components/Header.jsx';
 import { Welcome } from "./components/Welcome.jsx";
 import { Result } from "./components/Result.jsx";
 import { QuizQuestion } from "./components/quizQuestion.jsx";
-import { questions } from "./assets/Questions.jsx";
+import { MCQS, } from "./assets/Questions.jsx";
 import { useState } from "react";
 import { QuizParamz } from './components/QuizParamz.jsx';
 
@@ -16,17 +16,32 @@ function App() {
     const [showWelcome, setShowWelcome] = useState(true);
     const [showQuizParamz, setShowQuizParamz] = useState(true);
 
+    // const handleAnswers = (isCorrect) => {
+    //   const newAnswers = [...answers, isCorrect ? 1 : 0];
+
+    //   setAnswers(newAnswers);
+
+    //   if (currentQuestion >= MCQS.length - 1) {
+    //     setShowResult(true);
+    //   } else {
+    //     setCurrentQuestion(currentQuestion + 1);
+    //   }
+    // };
+
     const handleAnswers = (isCorrect) => {
-      const newAnswers = [...answers, isCorrect ? 1 : 0];
-
+      const newAnswers = [...answers];
+      newAnswers[currentQuestion] = isCorrect ? 1 : 0;
       setAnswers(newAnswers);
+    };
 
-      if (currentQuestion >= questions.length - 1) {
+    const handleNext = () => {
+      if (currentQuestion >= MCQS.length - 1) {
         setShowResult(true);
       } else {
-        setCurrentQuestion(currentQuestion + 1);
+        setCurrentQuestion((currentQuestion) => currentQuestion + 1);
       }
     };
+
 
     const setParamz = () => setShowWelcome(false);
     const saveParamz = () => setShowQuizParamz(false);
@@ -55,9 +70,10 @@ function App() {
             )}
             {!showQuizParamz && !showResult && (
               <QuizQuestion
-                question={questions[currentQuestion]}
+                question={MCQS[currentQuestion]}
                 questionNumber={currentQuestion + 1}
                 onAnswer={handleAnswers}
+                onNext={handleNext}
               />
             )}
             {showResult && (

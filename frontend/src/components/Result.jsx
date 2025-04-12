@@ -1,11 +1,11 @@
 import React from 'react'
-import { questions } from '../assets/Questions.jsx'
+import { MCQS } from '../assets/Questions.jsx'
 
 export const Result = ({answers, restartTest}) => {
   const score = answers.reduce((total, score) => total + score, 0);
 
 
-  const mistakes = questions.filter((_, index) => answers[index] === 
+  const mistakes = MCQS.filter((_, index) => answers[index] === 
   0).map((question) => ({
     question: question.text,
     correctAnswer: question.options.find((opt) => opt.isCorrect).text
@@ -16,7 +16,7 @@ export const Result = ({answers, restartTest}) => {
       
       <h2 className='text-3xl font-bold text-gray-800'>Quize Complete !!!</h2>
 
-      <p className='text-2xl font-semibold text-gray-700'>Your Score: {score} out of {questions.length}</p>
+      <p className='text-2xl font-semibold text-gray-700'>Your Score: {score} out of {MCQS.length}</p>
 
 
       {mistakes.length > 0 && (

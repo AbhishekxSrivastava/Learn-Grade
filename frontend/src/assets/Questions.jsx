@@ -1,5 +1,6 @@
-export const questions = [
+export const MCQS = [
   {
+    type: "MCQS",
     text: "Which of the following is a key characteristic of a 2-stroke engine?",
     options: [
       { text: "Completes a power cycle in 4 strokes", isCorrect: false },
@@ -9,6 +10,7 @@ export const questions = [
     ],
   },
   {
+    type: "MCQS",
     text: "What is the main advantage of a 4-stroke engine over a 2-stroke engine?",
     options: [
       { text: "Higher power output", isCorrect: false },
@@ -18,6 +20,7 @@ export const questions = [
     ],
   },
   {
+    type: "MCQS",
     text: "Which component is NOT present in a typical 2-stroke engine?",
     options: [
       { text: "Piston", isCorrect: false },
@@ -27,6 +30,7 @@ export const questions = [
     ],
   },
   {
+    type: "MCQS",
     text: "Which type of engine is commonly used in motorcycles and chainsaws?",
     options: [
       { text: "4-stroke engine", isCorrect: false },
@@ -36,6 +40,7 @@ export const questions = [
     ],
   },
   {
+    type: "MCQS",
     text: "Why do 2-stroke engines produce more emissions than 4-stroke engines?",
     options: [
       { text: "They have more moving parts", isCorrect: false },
@@ -43,5 +48,53 @@ export const questions = [
       { text: "They operate at lower speeds", isCorrect: false },
       { text: "They have a longer power cycle", isCorrect: false },
     ],
+  },
+];
+
+
+export const Booleans = [
+  {
+    type: "TRUE/FALSE",
+    text: "2-Stroke Engine is commonly used in Motorcycles and Chainsaws",
+    option: [
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
+    ],
+  },
+  {
+    type: "TRUE/FALSE",
+    text: "Valves is NOT present in a typical 2-stroke engine",
+    option: [
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
+    ],
+  },
+];
+
+
+export const OneLine = [
+  {
+    type: "One Line Anser-Type",
+    text: "What is the main advantage of a 4-stroke engine over a 2-stroke engine?",
+    // userInput:{ oneLinear }
+  },
+  {
+    type: "One Line Anser-Type",
+    text: "Which type of engine is commonly used in motorcycles and chainsaws?",
+    // userInput:{ oneLinear }
+  },
+];
+
+
+export const Para = [
+  {
+    type: "One Paragraph Anser-Type",
+    text: "Write a short note on the working of 2-Stroke Engine",
+    // userInput: { OnePara },
+  },
+  {
+    type: "One Paragraph Anser-Type",
+    text: "Write a short note on the working of 4-Stroke Engine",
+    // userInput: { OnePara },
   },
 ];
