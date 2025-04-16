@@ -74,27 +74,29 @@ export const Booleans = [
 
 export const OneLine = [
   {
-    type: "One Line Anser-Type",
+    type: "One Line Answer-Type",
     text: "What is the main advantage of a 4-stroke engine over a 2-stroke engine?",
-    // userInput:{ oneLinear }
+    correctAnswer: "Lower fuel consumption", // Added correct answer
   },
   {
-    type: "One Line Anser-Type",
+    type: "One Line Answer-Type",
     text: "Which type of engine is commonly used in motorcycles and chainsaws?",
-    // userInput:{ oneLinear }
+    correctAnswer: "2-stroke engine", // Added correct answer
   },
 ];
 
 
 export const Para = [
   {
-    type: "One Paragraph Anser-Type",
+    type: "One Paragraph Answer-Type",
     text: "Write a short note on the working of 2-Stroke Engine",
-    // userInput: { OnePara },
+    correctAnswer:
+      "2-stroke engines work by firing once every two strokes of the piston...", // Added correct answer
   },
   {
-    type: "One Paragraph Anser-Type",
+    type: "One Paragraph Answer-Type",
     text: "Write a short note on the working of 4-Stroke Engine",
-    // userInput: { OnePara },
+    correctAnswer:
+      "4-stroke engines complete a power cycle in four strokes of the piston...", // Added correct answer
   },
 ];
