@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { Header } from "./components/Header.jsx";
 import { Welcome } from "./components/Welcome.jsx";
 import { Result } from "./components/Result.jsx";
+import { QuizParamz } from "./components/QuizParamz.jsx";
 import { MCQSQuestion } from "./components/quizQuestion.jsx";
 import { BooleanQuestion } from "./components/BooleanQuestion.jsx";
 import { OneLineQuestion } from "./components/OneLineQuestion.jsx";
 import { ParaQuestion } from "./components/ParaQuestion.jsx";
 import { MCQS, Booleans, OneLine, Para } from "./assets/Questions.jsx";
-import { QuizParamz } from "./components/QuizParamz.jsx";
 
 function App() {
   const allQuestions = [...MCQS, ...Booleans, ...OneLine, ...Para];
