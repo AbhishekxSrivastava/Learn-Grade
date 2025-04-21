@@ -14,9 +14,9 @@ function App() {
   const allQuestions = [...MCQS, ...Booleans, ...OneLine, ...Para];
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
+  const [showQuizParamz, setShowQuizParamz] = useState(true);
   const [showResult, setShowResult] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);
-  const [showQuizParamz, setShowQuizParamz] = useState(true);
 
   const handleAnswers = (answer) => {
     const newAnswers = [...answers, answer];
